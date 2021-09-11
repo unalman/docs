@@ -1,109 +1,109 @@
-# Vue Docs Writing Guide
+# Vue Dokümanlarının Yazım Kılavuzu
 
-Writing documentation is an exercise in empathy. We're not describing an objective reality - the source code already does that. Our job is to help shape the relationship between users and the Vue ecosystem. This ever-evolving guide provides some rules and recommendations on how to do that consistently within the Vue ecosystem.
+Belge yazmak bir empati alıştırmasıdır. Nesnel bir gerçekliği tanımlamıyoruz - kaynak kodu zaten bunu yapıyor. Bizim işimiz, kullanıcılar ve Vue ekosistemi arasındaki ilişkiyi şekillendirmeye yardımcı olmaktır. Bu sürekli gelişen kılavuz, Vue ekosisteminde bunun tutarlı bir şekilde nasıl yapılacağına dair bazı kurallar ve öneriler sunar.
 
-## Principles
+## Prensipler
 
-- **A feature doesn't exist until it's well documented.**
-- **Respect users' cognitive capacity (i.e. brain power).** When a user starts reading, they begin with a certain amount of limited brain power and when they run out, they stop learning.
-  - Cognitive capacity is **depleted faster** by complex sentences, having to learn more than one concept at a time, and abstract examples that don't directly relate to a user's work.
-  - Cognitive capacity is **depleted more slowly** when we help them feel consistently smart, powerful, and curious. Breaking things down into digestible pieces and minding the flow of the document can help keep them in this state.
-- **Always try to see from the user's perspective.** When we understand something thoroughly, it becomes obvious to us. This is called _the curse of knowledge_. In order to write good documentation, try to remember what you first needed to know when learning this concept. What jargon did you need to learn? What did you misunderstand? What took a long time to really grasp? Good documentation meets users where they are. It can be helpful to practice explaining the concept to people in person before.
-- **Describe the _problem_ first, then the solution.** Before showing how a feature works, it's important to explain why it exists. Otherwise, users won't have the context to know if this information is important to them (is it a problem they experience?) or what prior knowledge/experience to connect it to.
-- **While writing, don't be afraid to ask questions**, _especially_ if you're afraid they might be "dumb". Being vulnerable is hard, but it's the only way for us to more fully understand what we need to explain.
-- **Be involved in feature discussions.** The best APIs come from documentation-driven development, where we build features that are easy to explain, rather than trying to figure out how to explain them later. Asking questions (especially "dumb" questions) earlier often helps reveal confusions, inconsistencies, and problematic behavior before a breaking change would be required to fix them.
+- **Bir özellik, iyi belgelenene kadar mevcut değildir.**
+- **Kullanıcıların bilişsel kapasitesine (yani beyin gücüne) saygı gösterin.** Bir kullanıcı okumaya başladığında, belirli bir miktarda sınırlı beyin gücüyle başlar ve bittiğinde öğrenmeyi bırakır.
+  - Bilişsel kapasite, karmaşık cümleler, aynı anda birden fazla kavram öğrenme zorunluluğu ve kullanıcının çalışmasıyla doğrudan ilgili olmayan soyut örnekler nedeniyle daha **hızlı tükenir**.
+  - Sürekli olarak akıllı, güçlü ve meraklı hissetmelerine yardımcı olduğumuzda, bilişsel kapasite **daha yavaş tükenir**. İşleri sindirilebilir parçalara ayırmak ve dokümanın akışına dikkat etmek onları bu durumda tutmaya yardımcı olabilir.
+- **Daima kullanıcının bakış açısından bakmaya çalışın.** Bir şeyi iyice anladığımızda, bizim için apaçık hale gelir. Buna _bilginin laneti_ denir. İyi dokümanlar yazmak için, bu kavramı öğrenirken ilk olarak bilmeniz gerekenleri hatırlamaya çalışın. Hangi jargonu öğrenmen gerekiyordu? Neyi yanlış anladın? Neyi gerçekten kavramak uzun zaman aldı? İyi dokümantasyon, kullanıcılarla bulundukları yerde buluşur. Konsepti insanlara daha önce yüz yüze açıklama alıştırması yapmak faydalı olabilir.
+- **Önce _sorunu_, ardından çözümü tanımlayın.** Bir özelliğin nasıl çalıştığını göstermeden önce, neden var olduğunu açıklamak önemlidir. Aksi takdirde, kullanıcılar bu bilgilerin kendileri için önemli olup olmadığını (Yaşadıkları bir sorun mu?) veya hangi ön bilgiye/deneyime bağlanacağını bilecek içeriğe sahip olmayacaktır.
+- **Yazarken soru sormaktan çekinmeyin**, özellikle de "aptalca" olabileceğinden korkuyorsanız. Kolay incinebilir olmak zordur, ancak açıklamamız gereken şeyi daha tam olarak anlamamızın tek yolu budur.
+- **Özellik tartışmalarına katılın.** En iyi API'ler, daha sonra nasıl açıklanacağını bulmaya çalışmak yerine, açıklanması kolay özellikler oluşturduğumuz, dokümantasyona dayalı geliştirmeden(documentation-driven development) gelir. Soruları daha erken sormak (özellikle "aptalca" soruları), genellikle kafa karışıklıklarını, tutarsızlıkları ve sorunlu davranışları, bunları düzeltmek için bir kırılma değişikliği gerekmeden önce ortaya çıkarmaya yardımcı olur.
 
-## Organization
+## Organizasyon
 
-- **Installation/Integration**: Provide a thorough overview of how to integrate the software into as many different kinds of projects as necessary.
-- **Introduction/Getting Started**:
-  - Provide a less than 10 minute overview of the problems the project solves and why it exists.
-  - Provide a less than 30 minute overview of the problems the project solves and how, including when and why to use the project and some simple code examples. At the end, link to both to Installation page and the beginning of the Essentials Guide.
-- **Guide**: Make users feel smart, powerful, and curious, then maintain this state so that users maintain the motivation and cognitive capacity to keep learning more. Guide pages are meant to be read sequentially, so should generally be ordered from the highest to lowest power/effort ratio.
-  - **Essentials**: It should take no longer than 5 hours to read the Essentials, though shorter is better. Its goal is to provide the 20% of knowledge that will help users handle 80% of use cases. Essentials can link to more advanced guides and the API, though, in most cases, you should avoid such links. When they are provided, you need also provide a context so users are aware if they should follow this link on their first reading. Otherwise, many users end up exhausting their cognitive capacity link-hopping, trying to fully learn every aspect of a feature before moving on, and as a result, never finish that first read-through of the Essentials. Remember that a smooth read is more important than being thorough. We want to give people the information they need to avoid a frustrating experience, but they can always come back and read further, or Google a less common problem when they encounter it.
-  - **Advanced**: While the Essentials helps people handle ~80% of use cases, subsequent guides help get users to 95% of use cases, plus more detailed information on non-essential features (e.g. transitions, animations), more complex convenience features (e.g. mixins, custom directives), and dev experience improvements (e.g. JSX, plugins). The final 5% of use cases that are more niche, complex, and/or prone to abuse will be left to the cookbook and API reference, which can be linked to from these advanced guides.
-- **Reference/API**: Provide a complete list of features, including type information, descriptions of the problem each solves, examples of every combination of options, and links to guides, cookbook recipes, and other internal resources providing more detail. Unlike other pages, this one is not meant to be read top-to-bottom, so plenty of detail can be provided. These references must also be more easily skimmable than the guides, so the format should be closer to dictionary entries than the story-telling format of the guides.
-- **Migrations**:
-  - **Versions**: When important changes are made, it's useful to include a full list of changes, including a detailed explanation of why the change was made and how to migrate their projects.
-  - **From other projects**: How does this software compare to similar software? This is important to help users understand what additional problems we might solve or create for them, and to what extent they can transfer knowledge they already have.
-- **Style Guide**: There are necessarily some key pieces in development that need a decision, but are not core to the API. The style guide provides educated, opinionated recommendations to help guide these decisions. They shouldn't be followed blindly, but can help teams save time by being aligned on smaller details.
-- **Cookbook**: Recipes in the cookbook are written with some assumption of familiarity with Vue and its ecosystem. Each is a highly structured document that walks through some common implementation details that a Vue dev might encounter.
+- **Kurulum/Entegrasyon**: Yazılımın gerektiği kadar çok farklı türdeki projeye nasıl entegre edileceğine dair kapsamlı bir genel bakış sağlayın.
+- **Giriş/Başlarken**:
+  - Projenin çözdüğü sorunlara ve neden var olduğuna dair 10 dakikadan daha kısa bir genel bakış sağlayın.
+  - Projenin ne zaman ve neden kullanılacağı ve bazı basit kod örnekleri de dahil olmak üzere, projenin çözdüğü sorunlara ve nasıl olduğuna dair 30 dakikadan daha kısa bir genel bakış sağlayın. Sonunda, hem Kurulum sayfasına hem de Temel Bilgiler Kılavuzunun başlangıcına bağlantı verin.
+- **Kılavuz**: Kullanıcıları akıllı, güçlü ve meraklı hissettirin, ardından bu durumu koruyun, böylece kullanıcılar daha fazla öğrenmeye devam etmek için motivasyon ve bilişsel kapasiteyi sürdürsün. Kılavuz sayfaları sırayla okunmak içindir, bu nedenle genellikle en yüksekten en düşük güç/efor oranına göre sıralanmalıdır.
+  - **Temeller**: Temelleri okumak 5 saatten uzun sürmemelidir, ancak daha kısası daha iyidir. Amacı, kullanıcıların kullanım durumlarının %80'ini ele almasına yardımcı olacak bilginin %20'sini sağlamaktır. Temeller, daha gelişmiş kılavuzlara ve API'ye bağlantı verebilir, ancak çoğu durumda bu tür bağlantılardan kaçınmalısınız. Sağlandığında, kullanıcıların ilk okumalarında bu bağlantıyı izlemeleri gerekip gerekmediğini anlamaları için bir bağlam da sağlamanız gerekir. Aksi takdirde, birçok kullanıcı, devam etmeden önce bir özelliğin her yönünü tam olarak öğrenmeye çalışarak bilişsel kapasite bağlantı atlamasını tüketir ve sonuç olarak, Temellerin ilk okumasını asla bitirmez. Düzgün bir okumanın kapsamlı olmaktan daha önemli olduğunu unutmayın. İnsanlara sinir bozucu bir deneyim yaşamamaları için ihtiyaç duydukları bilgileri vermek istiyoruz, ancak her zaman geri dönüp daha fazla okuyabilirler veya Google'da daha az yaygın bir sorunla karşılaştıklarında.
+  - **İleri Seviye**: Temeller, kullanıcıların kullanım durumlarının ~%80'ini ele almasına yardımcı olurken, sonraki kılavuzlar, kullanıcıların kullanım durumlarının %95'ine ulaşmasına yardımcı olur ve ayrıca temel olmayan özellikler (örneğin. geçişler, animasyonlar), daha karmaşık kolaylık özellikleri (örneğin. mixins, özel yönergeler) ve geliştirme deneyimi iyileştirmeleri hakkında daha ayrıntılı bilgiler sağlar. (örneğin. JSX, eklentiler). Daha niş, karmaşık ve/veya kötüye kullanıma açık kullanım durumlarının son %5'i, bu gelişmiş kılavuzlardan bağlantı kurulabilecek yemek kitabına ve API referansına bırakılacaktır.
+- **Referans/API**: Tür bilgileri, her birinin çözdüğü sorunun açıklamaları, her seçenek kombinasyonunun örnekleri ve kılavuzlara, yemek kitabı tariflerine ve daha fazla ayrıntı sağlayan diğer dahili kaynaklara bağlantılar dahil olmak üzere özelliklerin tam bir listesini sağlayın. Diğer sayfalardan farklı olarak, bu sayfa yukarıdan aşağıya okunacak şekilde tasarlanmamıştır, bu nedenle bol miktarda ayrıntı sağlanabilir. Bu referanslar ayrıca kılavuzlardan daha kolay gözden geçirilebilir olmalıdır, bu nedenle format, kılavuzların hikaye anlatım formatından ziyade sözlük girişlerine daha yakın olmalıdır.
+- **Göçler(Migrations)**:
+  - **Versiyonlar**: Önemli değişiklikler yapıldığında, değişikliğin neden yapıldığına ve projelerinin nasıl taşınacağına ilişkin ayrıntılı bir açıklama da dahil olmak üzere, değişikliklerin tam listesini eklemek yararlıdır.
+  - **Diğer projelerden**: Bu yazılım benzer yazılımlarla nasıl karşılaştırılır?Bu, kullanıcıların kendileri için hangi ek sorunları çözebileceğimizi veya yaratabileceğimizi ve zaten sahip oldukları bilgileri ne ölçüde aktarabileceklerini anlamalarına yardımcı olmak için önemlidir.
+- **Stil rehberi**: Geliştirme aşamasında mutlaka karar verilmesi gereken ancak API'nin özü olmayan bazı önemli parçalar vardır. Stil kılavuzu, bu kararlara rehberlik etmeye yardımcı olmak için eğitimli, fikirli öneriler sunar. Körü körüne takip edilmemelidirler, ancak daha küçük ayrıntılar üzerinde hizalanarak ekiplerin zaman kazanmalarına yardımcı olabilir.
+- **Yemek kitabı**: Yemek kitabındaki tarifler, Vue ve ekosistemine aşinalık varsayımıyla yazılmıştır. Her biri, bir Vue geliştiricisinin karşılaşabileceği bazı genel uygulama ayrıntılarını anlatan yüksek düzeyde yapılandırılmış bir belgedir.
 
-## Writing & Grammar
+## Yazım ve Dilbilgisi
 
-### Style
+### Stil
 
-- **Headings should describe problems**, not solutions. For example, a less effective heading might be "Using props", because it describes a solution. A better heading might be "Passing Data to Child Components with Props", because it provides the context of the problem props solve. Users won't really start paying attention to the explanation of a feature until they have some idea of why/when they'd use it.
-- **When you assume knowledge, declare it** at the beginning and link to resources for less common knowledge that you're expecting.
-- **Introduce only one new concept at a time whenever possible** (including both text and code examples). Even if many people are able to understand when you introduce more than one, there are also many who will become lost - and even those who don't become lost will have depleted more of their cognitive capacity.
-- **Avoid special content blocks for tips and caveats when possible.** It's generally preferable to blend these more naturally into the main content, e.g. by building on examples to demonstrate an edge case.
-- **Don't include more than two interwoven tips and caveats per page.** If you find that more than two tips are needed in a page, consider adding a caveats section to address these issues. The guide is meant to be read straight through, and tips and caveats can be overwhelming or distracting to someone trying to understand the base concepts.
-- **Avoid appeals to authority** (e.g. "you should do X, because that's a best practice" or "X is best because it gives you full separation of concerns"). Instead, demonstrate with examples the specific human problems caused and/or solved by a pattern.
-- **When deciding what to teach first, think of what knowledge will provide the best power/effort ratio.** That means teaching whatever will help users solve the greatest pains or greatest number of problems, with the relatively least effort to learn. This helps learners feel smart, powerful, and curious, so their cognitive capacity will drain more slowly.
-- **Unless the context assumes a string template or build system, only write code that works in any environment by the software (e.g. Vue, Vuex, etc).**
-- **Show, don't tell.** For example, "To use Vue on a page, you can add this to your HTML" (then show the script tag), instead of "To use Vue on a page, you can add a script element with a src attribute, the value of which should be a link to Vue's compiled source".
-- **Almost always avoid humor (for English docs)**, especially sarcasm and pop culture references, as it doesn't translate well across cultures.
-- **Never assume a more advanced context than you have to.**
-- **In most cases, prefer links between sections of the docs over repeating the same content in multiple sections.** Some repetition in content is unavoidable and even essential for learning. However, too much repetition also makes the docs more difficult to maintain, because a change in the API will require changes in many places and it's easy to miss something. This is a difficult balance to strike.
-- **Specific is better than generic.** For example, a `<BlogPost>` component example is better than `<ComponentA>`.
-- **Relatable is better than obscure.** For example, a `<BlogPost>` component example is better than `<CurrencyExchangeSettings>`.
-- **Be emotionally relevant.** Explanations and examples that relate to something people have experience with and care about will always be more effective.
-- **Always prefer simpler, plainer language over complex or jargony language.** For example:
-  - "you can use Vue with a script element" instead of "in order to initiate the usage of Vue, one possible option is to actually inject it via a script HTML element"
-  - "function that returns a function" instead of "higher order function"
-- **Avoid language that invalidate struggle**, such as "easy", "just", "obviously", etc. For reference, see [Words To Avoid in Educational Writing](https://css-tricks.com/words-avoid-educational-writing/).
+- **Başlıklar sorunları tanımlamalıdır**, çözümleri değil. Örneğin, daha az etkili bir başlık, bir çözümü tanımladığı için "prop'ları kullanma" olabilir. Daha iyi bir başlık "Prop'lar ile Alt Bileşenlere Veri Geçirme" olabilir, çünkü prop'ların çözdüğü sorunun bağlamını sağlar. Kullanıcılar, bir özelliği neden/ne zaman kullanacaklarına dair bir fikirleri olana kadar, bir özelliğin açıklamasına gerçekten dikkat etmeye başlamazlar.
+- **Bilgiyi kabul ettiğinizde, bunu en baştan beyan edin** ve beklediğiniz daha az yaygın bilgi için kaynaklara bağlantı verin.
+- **Mümkün olduğunca bir seferde yalnızca bir yeni konsept tanıtın** (hem metin hem de kod örnekleri dahil). Birden fazla konsept tanıttığınızda birçok kişi anlayabilse bile, kaybolacak birçok kişi de olacaktır - ve kaybolmayanlar bile bilişsel kapasitelerinin çoğunu tüketmiş olacaktır.
+- **Mümkün olduğunca ipuçları ve uyarılar için özel içerik bloklarından kaçının.** Bunları ana içeriğe daha doğal bir şekilde karıştırmak genellikle tercih edilir, ör. Edge durumunu göstermek için örnekler üzerine inşa ederek.
+- **Sayfa başına ikiden fazla iç içe geçmiş ipucu ve uyarı eklemeyin.** Bir sayfada ikiden fazla ipucunun gerekli olduğunu fark ederseniz, bu sorunları gidermek için bir uyarı bölümü eklemeyi düşünün. Kılavuzun doğrudan okunması amaçlanmıştır ve ipuçları ve uyarılar, temel kavramları anlamaya çalışan biri için bunaltıcı veya dikkat dağıtıcı olabilir.
+- **Otoriteye başvurmaktan kaçının** (Örneğin. "X yapmalısın, çünkü bu en iyi uygulamadır" veya "X en iyisidir çünkü size endişeleri tam olarak ayırmanızı sağlar"). Bunun yerine, bir örüntü tarafından neden olunan ve/veya çözülen belirli insan sorunlarını örneklerle gösterin.
+- **İlk önce neyi öğreteceğinize karar verirken, hangi bilginin en iyi güç/çaba oranını sağlayacağını düşünün.** Bu, kullanıcıların en büyük acıları veya en fazla sayıda sorunu çözmelerine yardımcı olacak her şeyi, nispeten daha az öğrenme çabasıyla öğretmek anlamına gelir. Bu, öğrencilerin kendilerini akıllı, güçlü ve meraklı hissetmelerine yardımcı olur, böylece bilişsel kapasiteleri daha yavaş tükenir.
+- **Bağlamda bir string şablonu veya yapı sistemi olmadığı sürece, yalnızca yazılım tarafından herhangi bir ortamda çalışan kodu yazın (örn. Vue, Vuex, vb.).**
+- **Göster, söyleme.** Örneğin, "Bir sayfada Vue kullanmak için, değeri Vue'nun derlenmiş kaynağına bir bağlantı olması gereken src niteliğine sahip bir komut dosyası öğesi ekleyebilirsiniz." yerine "Bir sayfada Vue kullanmak için bunu HTML'nize ekleyebilirsiniz" (ardından komut dosyası etiketini gösterin).
+- **Neredeyse her zaman mizahtan kaçının (İngilizce dokümanlar için)**, özellikle alaycılıktan ve popüler kültür referanslarından kaçının, çünkü kültürler arasında iyi bir şekilde tercüme edilmez.
+- **Asla olması gerekenden daha gelişmiş bir bağlam varsaymayın.**
+- **Çoğu durumda, aynı içeriği birden çok bölümde tekrarlamak yerine, dokümanların bölümleri arasındaki bağlantıları tercih edin.** İçerikte bazı tekrarlar kaçınılmazdır ve hatta öğrenme için gereklidir. Bununla birlikte, çok fazla tekrar, dokümanların bakımını daha da zorlaştırır, çünkü API'deki bir değişiklik birçok yerde değişiklik yapılmasını gerektirir ve bir şeyleri gözden kaçırmak kolaydır.This is a difficult balance to strike.
+- **Spesifik, genelden daha iyidir.** Örneğin, bir `<BlogPost>` bileşen örneği `<ComponentA>`'dan daha iyidir.
+- **İlişkilendirilebilir, belirsiz olmaktan iyidir.** Örneğin, bir `<BlogPost>` bileşen örneği, `<CurrencyExchangeSettings>` öğesinden daha iyidir.
+- **Duygusal olarak ilgili olun.** İnsanların deneyimlediği ve önemsediği bir şeyle ilgili açıklamalar ve örnekler her zaman daha etkili olacaktır.
+- **Karmaşık veya jargonlu bir dil yerine her zaman daha basit, daha sade bir dil tercih edin.** Örneğin:
+  - "Vue'yu bir komut dosyası öğesiyle kullanabilirsiniz" yerine "Vue kullanımını başlatmak için olası bir seçenek, onu bir komut dosyası HTML öğesi aracılığıyla gerçekten enjekte etmektir"
+  - "yüksek dereceli fonksiyon" yerine "fonksiyon döndüren fonksiyon"
+- **Çabalamayı geçersiz kılan dilden kaçının**, "kolay", "sadece", "belli ki" vb. Referans için bkz. [Eğitici Yazılarda Kaçınılması Gereken Sözler](https://css-tricks.com/words-avoid-educational-writing/).
 
-### Grammar
+### Gramer
 
-- **Avoid abbreviations** in writing and code examples (e.g. `attribute` is better than `attr`, `message` is better than `msg`), unless you are specifically referencing an abbreviation in an API (e.g. `$attrs`). Abbreviation symbols included on standard keyboards (e.g. `@`, `#`, `&`) are OK.
-- **When referencing a directly following example, use a colon (`:`) to end a sentence**, rather than a period (`.`).
-- **Use the Oxford comma** (e.g. "a, b, and c" instead of "a, b and c"). ![Why the Oxford comma is important](/images/oxford-comma.jpg)
-  - Source: [The Serial (Oxford) Comma: When and Why To Use It](https://www.inkonhand.com/2015/10/the-serial-oxford-comma-when-and-why-to-use-it/)
-- **When referencing the name of a project, use the name that project refers to itself as.** For example, "webpack" and "npm" should both use lowercase as that's how their documentation refers to them.
-- **Use Title Case for headings** - at least for now, since it's what we use through the rest of the docs. There's research suggesting that sentence case (only first word of the heading starts with a capital) is actually superior for legibility and also reduces the cognitive overhead for documentation writers, since they don't have to try to remember whether to capitalize words like "and", "with", and "about".
-- **Don't use emojis (except in discussions).** Emojis are cute and friendly, but they can be a distraction in documentation and some emoji even convey different meanings in different cultures.
+- **Kısaltmalardan kaçının.** Bir API'de özel olarak bir kısaltmaya atıfta bulunmuyorsanız (örneğin, `$attrs`), yazma ve kod örneklerinde kısaltmalardan kaçının (örneğin, `attribute`, `attr`'dan daha iyidir, `message`, `msg`'den daha iyidir). Standart klavyelerde bulunan kısaltma sembolleri (ör. `@`, `#`, `&`) uygundur.
+- **Doğrudan aşağıdaki örneğe atıfta bulunurken, cümleyi sonlandırmak için nokta (.) yerine iki nokta üst üste (:) kullanın.**
+- **Oxford virgülünü kullanın** (örneğin "a, b ve c" yerine "a, b ve c"). ![Oxford virgülü neden önemlidir?](/images/oxford-comma.jpg)
+  - Kaynak: [Seri (Oxford) Virgül: Ne Zaman ve Neden Kullanılmalı](https://www.inkonhand.com/2015/10/the-serial-oxford-comma-when-and-why-to-use-it/)
+- **Bir projenin adına atıfta bulunurken, projenin kendisine atıfta bulunduğu adı kullanın.** Örneğin, "webpack" ve "npm", dokümantasyonlarında bunlara atıfta bulunduğu için küçük harf kullanmalıdır.
+- **Başlıklar için Başlık Durumunu kullanın** - en azından şimdilik, çünkü dokümanların geri kalanında kullandığımız şey budur. Cümle durumunun (başlığın yalnızca ilk kelimesi büyük harfle başlar) aslında okunaklılık açısından üstün olduğunu ve ayrıca belge yazarları için bilişsel yükü azalttığını öne süren araştırmalar var, çünkü "ve", "ile" ve "hakkında" gibi sözcükleri büyük harf yapıp yapmadıklarını hatırlamaya çalışmak zorunda değiller.
+- **Emoji kullanmayın (tartışmalar dışında).** Emojiler sevimli ve arkadaş canlısıdır, ancak belgelerde dikkat dağıtıcı olabilirler ve hatta bazı emojiler farklı kültürlerde farklı anlamlar taşır.
 
-## Iteration & Communication
+## Yineleme ve İletişim
 
-- **Excellence comes from iteration.** First drafts are always bad, but writing them is a vital part of the process. It's extremely difficult to avoid the slow progression of Bad -> OK -> Good -> Great -> Inspiring -> Transcendent.
-- **Only wait until something is "Good" before publishing.** The community will help you push it further down the chain.
-- **Try not to get defensive when receiving feedback.** Our writing can be very personal to us, but if we get upset with the people who help us make it better, they will either stop giving feedback or start limiting the kind of feedback they give.
-- **Proof-read your own work before showing it to others.** If you show someone work with a lot of spelling/grammar mistakes, you'll get feedback about spelling grammar/mistakes instead of more valuable notes about whether the writing is achieving your goals.
-- **When you ask people for feedback, tell reviewers what:**
-  - **you're trying to do**
-  - **your fears are**
-  - **balances you're trying to strike**
-- **When someone reports a problem, there is almost always a problem**, even if the solution they proposed isn't quite right. Keep asking follow-up questions to learn more.
-- People need to feel safe asking questions when contributing/reviewing content. Here's how you can do that:
-  - **Thank people for their contributions/reviews, even if you're feeling grumpy.** For example:
-    - "Great question!"
-    - "Thanks for taking the time to explain. 🙂"
-    - "This is actually intentional, but thanks for taking the time to contribute. 😊"
-  - **Listen to what people are saying and mirror if you're not sure you're understanding correctly.** This can help validate people's feelings and experiences, while also understanding if _you're_ understanding _them_ correctly.
-  - **Use a lot of positive and empathetic emojis.** It's always better to seem a little strange than mean or impatient.
-  - **Kindly communicate rules/boundaries.** If someone behaves in a way that's abusive/inappropriate, respond only with kindness and maturity, but also make it clear that this behavior is not acceptable and what will happen (according to the code of conduct) if they continue behaving poorly.
+- **Mükemmellik yinelemeden gelir.** İlk taslaklar her zaman kötüdür, ancak bunları yazmak sürecin hayati bir parçasıdır. Kötü -> Tamam -> İyi -> Harika -> İlham Veren -> Üstün yavaş ilerlemesinden kaçınmak son derece zordur.
+- **Yayınlamadan önce yalnızca bir şeyin "İyi" olmasını bekleyin.** Topluluk, onu zincirde daha da aşağı itmenize yardımcı olacaktır.
+- **Geri bildirim alırken savunmaya geçmemeye çalışın.** Yazımız bizim için çok kişisel olabilir, ancak daha iyi hale getirmemize yardımcı olan insanlara üzülürsek, ya geri bildirim vermeyi bırakırlar ya da verdikleri geri bildirim türünü sınırlamaya başlarlar.
+- **Başkalarına göstermeden önce kendi çalışmanızın yazım hatalarını bulup düzeltin.** Birine çok sayıda yazım/dil bilgisi hatası olan bir çalışma gösterirseniz, yazının hedeflerinize ulaşıp ulaşmadığına ilişkin daha değerli notlar yerine yazım dilbilgisi/hataları hakkında geri bildirim alırsınız.
+- **İnsanlardan geri bildirim istediğinizde, yorum yapacak olanlara şunları söyleyin:**
+  - **yapmaya çalışıyorsun**
+  - **senin korkuların**
+  - **vurmaya çalıştığınız dengeler**
+- **Birisi bir sorun bildirdiğinde, önerdiği çözüm tam olarak doğru olmasa bile hemen hemen her zaman bir sorun vardır.** Daha fazla bilgi edinmek için takip soruları sormaya devam edin.
+- İnsanların içeriğe katkıda bulunurken/incelerken soru sorarken kendilerini güvende hissetmeleri gerekir. Bunu şu şekilde yapabilirsiniz:
+  - **Huysuz olsanız bile insanlara katkıları/incelemeleri için teşekkür edin.** Örneğin:
+    - "Harika soru!"
+    - "Açıklamaya zaman ayırdığınız için teşekkürler. 🙂"
+    - "Bu aslında kasıtlıdır, ancak zaman ayırıp katkıda bulunduğunuz için teşekkür ederiz. 😊"
+  - **İnsanların söylediklerini dinleyin ve doğru anladığınızdan emin değilseniz yansıtın.** Bu, insanların duygularını ve deneyimlerini doğrulamaya yardımcı olurken aynı zamanda _onları_ doğru anlayıp anlamadığınızı da anlayabilir.
+  - **Bol bol pozitif ve empatik emoji kullanın.** Biraz garip görünmek, kaba veya sabırsız olmaktan her zaman daha iyidir.
+  - **Lütfen kuralları/sınırları iletin.** Birisi taciz edici/uygunsuz bir şekilde davranırsa, yalnızca nezaket ve olgunlukla yanıt verin, ancak aynı zamanda bu davranışın kabul edilemez olduğunu ve kötü davranmaya devam ederse (davranış kurallarına göre) ne olacağını açıkça belirtin.
 
-### Tips, Callouts, Alerts, and Line Highlights
+### İpuçları, Açıklamalar, Uyarılar ve Öne Çıkanlar
 
-We have some dedicated styles to denote something that's worth highlighting in a particular way. These are captured [on this page](https://v3.vuejs.org/guide/doc-style-guide.html#alerts). **They are to be used sparingly.**
+Belirli bir şekilde vurgulanmaya değer bir şeyi belirtmek için bazı özel stillerimiz var. bunlar [bu sayfada](https://v3.vuejs.org/guide/doc-style-guide.html#alerts) ele alınır. **Az miktarda kullanılmalıdırlar.**
 
-There is a certain temptation to abuse these styles, as one can simply add a change inside a callout. However, this breaks up the flow of reading for the user, and thus, should only be used in special circumstances. Wherever possible, we should attempt to create a narrative and flow within the page to respect the readers cognitive load.
+Bu stilleri kötüye kullanmak için belirli bir ayartma vardır, çünkü bir belirtme çizgisinin içine basitçe bir değişiklik eklenebilir. Ancak bu, kullanıcının okuma akışını bozar ve bu nedenle yalnızca özel durumlarda kullanılmalıdır. Mümkün olan her yerde, okuyucunun bilişsel yüküne saygı göstermek için sayfa içinde bir anlatı ve akış oluşturmaya çalışmalıyız.
 
-Under no circumstances should 2 alerts be used next to one another, it's a sign that we're not able to explain context well enough.
+Hiçbir koşulda 2 uyarı yan yana kullanılmamalıdır, bu, bağlamı yeterince iyi açıklayamadığımızın bir işaretidir.
 
-### Contributing
+### Katkı
 
-We appreciate small, focused PRs. If you'd like to make an extremely large change, please communicate with team members prior to a pull request. Here's a [writeup that details why this is so critical](https://www.netlify.com/blog/2020/03/31/how-to-scope-down-prs/) for us to work well on this team. Please understand that though we always appreciate contributions, ultimately we have to prioritize what works best for the project as a whole.
+Küçük, odaklanmış PR'ları takdir ediyoruz. Son derece büyük bir değişiklik yapmak istiyorsanız, lütfen bir pull request'den önce ekip üyeleriyle iletişim kurun. İşte bu ekipte iyi çalışmamızın [neden bu kadar kritik olduğunu ayrıntılarıyla anlatan bir yazı](https://www.netlify.com/blog/2020/03/31/how-to-scope-down-prs/). Lütfen katkıları her zaman takdir etmemize rağmen, sonuçta bir bütün olarak proje için en iyi olanı önceliklendirmemiz gerektiğini anlayın.
 
-## Resources
+## Kaynaklar
 
-### Software
+### Yazılım
 
-- [Grammarly](https://www.grammarly.com/): Desktop app and browser extension for checking spelling and grammar (though grammar checking doesn't catch everything and occasionally shows a false positive).
-- [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker): An extension for VS Code to help you check spelling within markdown and code examples.
+- [Grammarly](https://www.grammarly.com/): Yazım ve dil bilgisi denetimi için masaüstü uygulaması ve tarayıcı uzantısı (dilbilgisi denetimi her şeyi yakalamaz ve bazen yanlış bir pozitif gösterir).
+- [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker): markdown ve kod örnekleri içinde yazım denetimi yapmanıza yardımcı olacak bir VS Kodu uzantısı.
 
-### Books
+### Kitaplar
 
-- [On Writing Well](https://www.amazon.com/Writing-Well-30th-Anniversary-Nonfiction-ebook/dp/B0090RVGW0) (see [popular quotes](https://www.goodreads.com/work/quotes/1139032-on-writing-well-the-classic-guide-to-writing-nonfiction))
-- [Bird by Bird](https://www.amazon.com/Bird-Some-Instructions-Writing-Life/dp/0385480016) (see [popular quotes](https://www.goodreads.com/work/quotes/841198-bird-by-bird-some-instructions-on-writing-and-life))
+- [On Writing Well](https://www.amazon.com/Writing-Well-30th-Anniversary-Nonfiction-ebook/dp/B0090RVGW0) ([popüler alıntıları](https://www.goodreads.com/work/quotes/1139032-on-writing-well-the-classic-guide-to-writing-nonfiction) görün)
+- [Bird by Bird](https://www.amazon.com/Bird-Some-Instructions-Writing-Life/dp/0385480016) ([popüler alıntıları](https://www.goodreads.com/work/quotes/841198-bird-by-bird-some-instructions-on-writing-and-life) görün)
 - [Cognitive Load Theory](https://www.amazon.com/Cognitive-Explorations-Instructional-Performance-Technologies/dp/144198125X/)

@@ -1,31 +1,27 @@
-# v3.vuejs.org
+# v3.tr.vuejs.org
 
-This site is built with [VuePress](https://vuepress.vuejs.org/). Site content is written in Markdown format located in `src`.
+Bu site [VuePress](https://vuepress.vuejs.org/) ile oluşturulmuştur. Site içeriği, `src` içinde bulunan Markdown formatında yazılmıştır.
 
-## Writing
+## Yazılışı
 
-See the [Vue Docs Writing Guide](https://v3.vuejs.org/guide/writing-guide.html) for our rules and recommendations on writing and maintaining documentation.
+Dokümanların yazılması ve korunmasına ilişkin kurallarımız ve önerilerimiz için [Vue Dokümanlarını Yazma Kılavuzuna](https://v3.vuejs.org/guide/writing-guide.html) bakın.
 
-## Developing
+## Geliştirme
 
-1. Clone repository
-
-```bash
-git clone git@github.com:vuejs/docs.git
-```
-
-2. Install dependencies
+1. Repo'yu klonlayın
 
 ```bash
-yarn # or npm install
+git clone https://github.com/unalman/docs.git
 ```
 
-3. Start local development environment
+2. Bağımlılıkları indir
 
 ```bash
-yarn serve # or npm run serve
+yarn # veya npm install
 ```
 
-## Deploying
+3. Local geliştirme ortamını başlatın
 
-The site is automatically deployed when commits land in `master`, via [Netlify](https://www.netlify.com/).
+```bash
+yarn serve # veya npm run serve
+```
